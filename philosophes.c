@@ -46,12 +46,12 @@ void* philosophe(void *arg)
 
     while (countCycle < MAX_CYCLES)
     {
-        printf("philosophe %d pense\n", *id);
+        // printf("philosophe %d pense\n", *id);
 
         pthread_mutex_lock(&baguettes[left]);
         pthread_mutex_lock(&baguettes[right]);
 
-        printf("philosophe %d mange\n", *id);
+        // printf("philosophe %d mange\n", *id);
 
         pthread_mutex_unlock(&baguettes[left]);
         pthread_mutex_unlock(&baguettes[right]);
